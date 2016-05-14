@@ -1,0 +1,74 @@
+//// skeleton imports
+@import 'normalize';
+@import 'skeleton';
+////
+
+//// variables
+$primaryred: #E12100;
+$primaryteal: #88B5A8;
+$primarygrey: #929292;
+$primaryblue: #020951;
+
+/// pseudoglobals
+
+*{
+	position: relative;
+	veritcal-align: middle;
+	-webkit-transition: all 0.4s ease;
+  -moz-transition:    all 0.4s ease;
+  -ms-transition:     all 0.4s ease;
+  -o-transition:      all 0.4s ease;
+}
+
+
+/// convenience classes
+
+///mixins
+@mixin default_sansserif{
+	font-family: 'Montserrat', sans-serif;
+}
+@mixin default_serif{
+	font-family: 'Halant', sans-serif;
+}
+
+
+///  generics
+
+
+body{
+	@include default_serif;
+	nav{
+		text-align: center;
+		@include default_sansserif;
+		text-transform: uppercase;
+		color: $primarygrey;
+		
+		&.container{
+			border-bottom: 3px $primarygrey solid;
+		}
+		ul{
+			margin: 0;
+			padding: 10px;
+		}
+		li{
+			display: inline-block;
+			width: 19.5%;
+			margin: 0;
+			letter-spacing: 1px;
+			&:hover{
+				color: $primaryred;
+			}
+		}
+	}
+
+}
+
+
+
+//// document formal
+.logo-holder{
+	img{
+		width: 50%;
+		height: auto;
+	}
+}

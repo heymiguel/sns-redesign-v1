@@ -30,7 +30,7 @@ gulp.task('scripts', function() {
     .pipe(concat('main.js'))
     .pipe(gulp.dest('js'))
     .pipe(plumber({
-        errorHandler: notify.onError('Error: <%= error.message %>')
+        errorHandler: notify.onError()
     }))
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
@@ -44,13 +44,12 @@ gulp.task('sass', function () {
     .pipe(sass({
         includePaths: ['scss'].concat(neat)
     }))
-    .pipe(plumber({
-        errorHandler: notify.onError('Error: <%= error.message %>')
-    }))
+    // .pipe(plumber({
+    //     errorHandler: notify.onError('Error: <%= error.message %>')
+    // }))
     .pipe(gulp.dest('css'))
     .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
-    .pipe(gulp.dest('css'))
     /* Reload the browser CSS after every change */
     .pipe(reload({stream:true}));
 });
