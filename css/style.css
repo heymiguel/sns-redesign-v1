@@ -855,12 +855,14 @@ body {
       width: 100%;
       padding: 0 10px; }
   body h2 {
-    margin: 10px 0;
+    padding: 35px 0;
+    margin: 0;
     font-size: 4rem;
     text-transform: uppercase;
     font-weight: 400;
     font-family: 'Rubik', sans-serif;
-    letter-spacing: 1px; }
+    letter-spacing: 1px;
+    color: #929292; }
   body nav {
     text-align: center;
     font-family: 'Rubik', sans-serif;
@@ -918,9 +920,11 @@ body {
       top: 16px;
       left: 0; }
 
+.cityscape {
+  background: url("../images/city-dark.jpeg") no-repeat center;
+  background-size: cover; }
+
 #game-blurb {
-  background: url("../images/city-dark.jpeg") no-repeat;
-  background-size: cover;
   padding: 25px;
   color: white; }
   #game-blurb p {
@@ -942,19 +946,65 @@ body {
   width: 100%;
   z-index: 1; }
 
+#char-classes .image-mask {
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+#char-classes .cypher .image-mask {
+  background: rgba(27, 116, 187, 0.8); }
+  #char-classes .cypher .image-mask.open {
+    background: none; }
+
+#char-classes .pointman .image-mask {
+  background: rgba(27, 116, 187, 0.8); }
+  #char-classes .pointman .image-mask.open {
+    background: none; }
+
+#char-classes .faceman .image-mask {
+  background: rgba(27, 116, 187, 0.8); }
+  #char-classes .faceman .image-mask.open {
+    background: none; }
+
+#char-classes .soldier .image-mask {
+  background: rgba(27, 116, 187, 0.8); }
+  #char-classes .soldier .image-mask.open {
+    background: none; }
+
+#char-classes .scout .image-mask {
+  background: rgba(27, 116, 187, 0.8); }
+  #char-classes .scout .image-mask.open {
+    background: none; }
+
 #char-classes .character {
-  height: 400px;
+  height: 600px;
   width: 20%;
   float: left;
   background: pink; }
+  #char-classes .character li {
+    list-style-type: none;
+    margin: 0;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    padding: 0 0 0 10px; }
+  #char-classes .character p {
+    font-size: 1.2rem;
+    padding: 0 0 0 10px; }
   #char-classes .character .summary {
     position: absolute;
-    bottom: -160px;
+    bottom: -165px;
     left: 0px;
     height: 200px;
-    background: blue; }
+    background: none;
+    width: 100%;
+    z-index: 2; }
     #char-classes .character .summary h4 {
-      padding: 5px;
+      padding: 5px 10px;
       margin: 0;
       font-family: 'Rubik', sans-serif;
       text-transform: uppercase;
@@ -962,27 +1012,94 @@ body {
       color: white;
       letter-spacing: 1px;
       width: 95%; }
+    #char-classes .character .summary.open {
+      bottom: 0;
+      background: white; }
   #char-classes .character.cypher {
-    background: url("https://placeimg.com/200/1000/people") no-repeat;
+    background: url("../images/classes/cypher.png") no-repeat;
     background-size: cover; }
+    #char-classes .character.cypher .open h4 {
+      color: #1B74BB; }
   #char-classes .character.pointman {
-    background: url("https://placeimg.com/200/1000/people") no-repeat;
+    background: url("../images/classes/pointman.png") no-repeat;
     background-size: cover; }
+    #char-classes .character.pointman .open h4 {
+      color: #1B74BB; }
   #char-classes .character.faceman {
-    background: url("https://placeimg.com/200/1000/people") no-repeat;
+    background: url("../images/classes/faceman.png") no-repeat;
     background-size: cover; }
+    #char-classes .character.faceman .open h4 {
+      color: #1B74BB; }
   #char-classes .character.soldier {
-    background: url("https://placeimg.com/200/1000/people") no-repeat;
+    background: url("../images/classes/soldier.png") no-repeat;
     background-size: cover; }
+    #char-classes .character.soldier .open h4 {
+      color: #1B74BB; }
   #char-classes .character.scout {
-    background: url("https://placeimg.com/200/1000/people") no-repeat;
+    background: url("../images/classes/scout.png") no-repeat;
     background-size: cover; }
+    #char-classes .character.scout .open h4 {
+      color: #1B74BB; }
   #char-classes .character .char-description {
     z-index: 10;
     background: white; }
 
 #char-classes .character-details {
   z-index: 10;
-  background: white; }
+  background: white;
+  padding: 15px 0; }
+  #char-classes .character-details h5 {
+    font-size: 2.2rem;
+    font-family: 'Rubik', sans-serif;
+    border-bottom: 4px solid #1B74BB; }
   #char-classes .character-details .skills, #char-classes .character-details .proficiencies {
     margin: 0 0 15px 0; }
+    #char-classes .character-details .skills li, #char-classes .character-details .proficiencies li {
+      display: inline-block;
+      color: black;
+      width: 40px;
+      height: auto; }
+
+#factions h4 {
+  font-family: 'Rubik', sans-serif;
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin: 0; }
+
+#factions .tagline {
+  padding: 0 0 0 25px;
+  font-style: italic;
+  font-weight: 300; }
+
+#factions .blurb {
+  text-align: center;
+  padding: 20px; }
+
+#factions .faction-title {
+  background: whitesmoke;
+  padding: 10px;
+  border: 1px dotted black; }
+  #factions .faction-title .fa {
+    position: absolute;
+    top: 30%;
+    right: 20px;
+    font-size: 3rem;
+    color: #E12100; }
+
+#factions .faction-details h5 {
+  font-family: 'Rubik', sans-serif;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 300;
+  color: white;
+  padding: 10px; }
+
+#factions .faction-history h5 {
+  background: #020951; }
+
+#factions .faction-structure h5 {
+  background: #C4E8DE;
+  color: black; }
+
+#factions .faction-structure p {
+  margin-bottom: 15px; }

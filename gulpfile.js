@@ -25,6 +25,7 @@ var reload = browserSync.reload;
 gulp.task('scripts', function() {
   return gulp.src([
     /* Add your JS files here, they will be combined in this order */
+        'js/page_data.js',
         'js/app.js'
     ])
     .pipe(concat('main.js'))

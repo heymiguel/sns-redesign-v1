@@ -70,12 +70,14 @@ body{
 		 }
 	}
 	h2{
-		margin: 10px 0;
+		padding: 35px 0;
+		margin: 0;
 		font-size: 4rem;
 		text-transform: uppercase;
 		font-weight: 400;
 		@include default_sansserif;
 		letter-spacing: 1px;
+		color: $primarygrey;
 	}
 	nav{
 		text-align: center;
@@ -103,6 +105,7 @@ body{
 	.gridder{
 		width:100%;
 		background: url('../images/graphy/graphy.png');
+		// background: none;
 	}
 }
 
@@ -154,10 +157,11 @@ body{
 		}
 	}
 }
-
-#game-blurb{
-	background: url('../images/city-dark.jpeg') no-repeat;
+.cityscape{
+	background: url('../images/city-dark.jpeg') no-repeat center;
 	background-size: cover;
+}
+#game-blurb{
 	// min-height: 50vh;
 	padding: 25px;
 	color: white;
@@ -189,20 +193,86 @@ body{
 		width: 100%;
 		z-index: 1;
 	}
+	.image-mask{
+		z-index: 1;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+	}
+	.cypher{
+		.image-mask{
+			background: rgba(27,116,187,.8);
+			&.open{
+				background: none;
+			}
+		}
+
+	}
+	.pointman{
+		.image-mask{
+			background: rgba(27,116,187,.8);
+			&.open{
+				background: none;
+			}
+		}
+	}
+	.faceman{
+		.image-mask{
+			background: rgba(27,116,187,.8);
+			&.open{
+				background: none;
+			}
+		}
+	}
+	.soldier{
+		.image-mask{
+			background: rgba(27,116,187,.8);
+			&.open{
+				background: none;
+			}
+		}
+	}
+	.scout{
+		.image-mask{
+			background: rgba(27,116,187,.8);
+			&.open{
+				background: none;
+			}
+		}
+	}
+
 	.character{
-		height: 400px;
+		height: 600px;
 		width: 20%;
 		float: left;
 		background: pink;
+		li{
+			list-style-type: none;
+			margin: 0;
+			font-size: 1.2rem;
+			font-style: italic;
+			@include default_sansserif;
+			font-weight: 500;			
+			padding: 0 0 0 10px;
+		}
+		p{
+			font-size: 1.2rem;
+			padding: 0 0 0 10px;
+		}
 
 		.summary{
 			position: absolute;
-			bottom: -160px;
+			bottom: -165px;
 			left: 0px;
 			height: 200px;
-			background: blue;
+			background: none;
+			width: 100%;
+			z-index: 2;
 			h4{
-				padding: 5px;
+				padding: 5px 10px;
 				margin: 0;
 				@include default_sansserif;
 				text-transform: uppercase;
@@ -211,28 +281,55 @@ body{
 				letter-spacing: 1px;
 				width: 95%;
 			}
-
+			&.open{
+				bottom: 0;
+				background: white;
+			}
 		}
 		&.cypher{
-			background: url('https://placeimg.com/200/1000/people') no-repeat;
+			background: url('../images/classes/cypher.png') no-repeat;
 			background-size: cover;
-
+			.open{
+				h4{
+					color: #1B74BB;	
+				}
+			}
 		}
 		&.pointman{
-			background: url('https://placeimg.com/200/1000/people') no-repeat;
-			background-size: cover;				
+			background: url('../images/classes/pointman.png') no-repeat;
+			background-size: cover;
+			.open{
+				h4{
+					color: #1B74BB;	
+				}
+			}				
 		}
 		&.faceman{
-			background: url('https://placeimg.com/200/1000/people') no-repeat;
+			background: url('../images/classes/faceman.png') no-repeat;
 			background-size: cover;
+			.open{
+				h4{
+					color: #1B74BB;	
+				}
+			}
 		}
 		&.soldier{
-			background: url('https://placeimg.com/200/1000/people') no-repeat;
+			background: url('../images/classes/soldier.png') no-repeat;
 			background-size: cover;
+			.open{
+				h4{
+					color: #1B74BB;	
+				}
+			}
 		}
 		&.scout{
-			background: url('https://placeimg.com/200/1000/people') no-repeat;
+			background: url('../images/classes/scout.png') no-repeat;
 			background-size: cover;
+			.open{
+				h4{
+					color: #1B74BB;	
+				}
+			}
 		}
 		.char-description{
 			z-index: 10;
@@ -242,8 +339,75 @@ body{
 	.character-details{
 		z-index: 10;
 		background: white;
+		padding: 15px 0;
+		h5{
+			font-size: 2.2rem;
+			@include default_sansserif;
+			border-bottom: 4px solid #1B74BB;
+		}
 		.skills, .proficiencies{
+			//maybe display flex on these bad boys?
 			margin: 0 0 15px 0;
+			li{
+				display: inline-block;
+				color: black;
+				width: 40px;
+				height: auto;
+			}
+		}
+	}
+}
+
+#factions{
+	h4{
+		@include default_sansserif;
+		text-transform: uppercase;
+		font-size: 3rem;
+		margin: 0;
+	}
+	.tagline{
+		padding: 0 0 0 25px;
+		font-style: italic;
+		font-weight: 300;
+	}
+	.blurb{
+		text-align: center;
+		padding: 20px;
+	}
+	.faction-title{
+		background: whitesmoke;
+		padding: 10px;
+		border: 1px dotted black;
+		.fa{
+			position: absolute;
+			top: 30%;
+			right: 20px;
+			font-size: 3rem;
+			color: $primaryred;
+		}
+	}
+	.faction-details{
+		h5{
+			@include default_sansserif;
+			text-transform: uppercase;
+			font-size: 2rem;
+			font-weight: 300;
+			color: white;
+			padding: 10px;
+		}
+	}
+	.faction-history{
+		h5{
+			background: #020951;
+		}
+	}
+	.faction-structure{
+		h5{
+			background: #C4E8DE;
+			color: black;
+		}
+		p{
+			margin-bottom: 15px;
 		}
 	}
 }
