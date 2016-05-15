@@ -879,6 +879,9 @@ body {
       width: 19.5%;
       margin: 0;
       letter-spacing: 1px; }
+      body nav li a {
+        text-decoration: none;
+        color: inherit; }
       body nav li:hover {
         color: #E12100; }
   body .gridder {
@@ -1086,13 +1089,17 @@ body {
     font-size: 3rem;
     color: #E12100; }
 
-#factions .faction-details h5 {
-  font-family: 'Rubik', sans-serif;
-  text-transform: uppercase;
-  font-size: 2rem;
-  font-weight: 300;
-  color: white;
-  padding: 10px; }
+#factions .faction-details {
+  display: none; }
+  #factions .faction-details h5 {
+    font-family: 'Rubik', sans-serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 300;
+    color: white;
+    padding: 10px; }
+  #factions .faction-details p {
+    margin: 0 0 15px 0; }
 
 #factions .faction-history h5 {
   background: #020951; }
@@ -1103,3 +1110,6 @@ body {
 
 #factions .faction-structure p {
   margin-bottom: 15px; }
+
+#factions .expanded {
+  display: block; }

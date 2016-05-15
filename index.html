@@ -10,13 +10,13 @@
 <body>
 	<nav class="container">
 		<ul class="row">
-			<li>classes</li>
-			<li>setting</li>
+			<li><a href="#char-classes">classes</a></li>
+			<li><a href="#game-blurb">setting</a></li>
 			<li class="logo-holder">
 				<img src="images/sns_logo_v2.svg">
 			</li>
-			<li>factions</li>
-			<li>get started</li>
+			<li><a href="#factions">factions</a></li>
+			<li><a href="">get started</a></li>
 		</ul>
 	</nav>
 	<section id="hero" class="container">
@@ -233,7 +233,7 @@
 	<div class="gridder">
 		<section id="factions" class="container">
 			<h2>factions</h2>
-			<div class="row lensmen expanded">
+			<div class="row lensmen" data="lensmen">
 				<aside class="house-icon one columns">
 					icon here
 				</aside>
@@ -242,7 +242,7 @@
 					<p class="tagline">
 						"Impetus. Vincere. Tenebras."
 					</p>
-					<i class="fa fa-minus-square" aria-hidden="true"></i>
+					<i class="fa fa-plus-square" aria-hidden="true"></i>
 				</div>
 				<div class="faction-details eleven columns offset-by-one">
 					<p class="blurb">
@@ -250,24 +250,23 @@
 					</p>
 					<div class="faction-history five columns">
 						<h5>History</h5>
-						<p>
-							
-						</p>
+						<div class="history">
+						</div>
 					</div> 
 					<div class="faction-structure six columns">
 						<h5>doctrine</h5>
-						<p class="doctrine">
+						<div class="doctrine">
 							
-						</p>
+						</div>
 						<h5>organizational structure</h5>
-						<p class="org-structure">
+						<div class="org-structure">
 							
-						</p>
+						</div>
 					</div>
 				</div>
 				
 			</div>
-			<div class="row silent-empire">
+			<div class="row silent-empire" data="silent-empire">
 				<aside class="house-icon one columns">
 					icon here
 				</aside>
@@ -279,7 +278,7 @@
 					<i class="fa fa-plus-square" aria-hidden="true"></i>
 				</div>
 			</div>
-			<div class="row aesir">
+			<div class="row aesir" data="aesir">
 				<aside class="house-icon one columns">
 					icon here
 				</aside>
@@ -291,7 +290,7 @@
 					<i class="fa fa-plus-square" aria-hidden="true"></i>
 				</div>
 			</div>
-			<div class="row ksos">
+			<div class="row ksos" data="ksos">
 				<aside class="house-icon one columns">
 					icon here
 				</aside>
@@ -303,7 +302,7 @@
 					<i class="fa fa-plus-square" aria-hidden="true"></i>
 				</div>
 			</div>
-			<div class="row kraken">
+			<div class="row kraken" data="kraken">
 				<aside class="house-icon one columns">
 					icon here
 				</aside>
@@ -315,7 +314,7 @@
 					<i class="fa fa-plus-square" aria-hidden="true"></i>
 				</div> 
 			</div>
-			<div class="row order">
+			<div class="row order" data="order">
 				<aside class="house-icon one columns">
 					icon here
 				</aside>
@@ -331,3 +330,7 @@
 	</div>	
 </body>
 </html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="js/page_data.js"></script>
+<script src="js/main.js"></script>

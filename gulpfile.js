@@ -25,14 +25,10 @@ var reload = browserSync.reload;
 gulp.task('scripts', function() {
   return gulp.src([
     /* Add your JS files here, they will be combined in this order */
-        'js/page_data.js',
-        'js/app.js'
+        'js/page_data.js'
     ])
     .pipe(concat('main.js'))
     .pipe(gulp.dest('js'))
-    .pipe(plumber({
-        errorHandler: notify.onError()
-    }))
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
     .pipe(gulp.dest('js'));

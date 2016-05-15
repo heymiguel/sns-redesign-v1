@@ -97,6 +97,11 @@ body{
 			width: 19.5%;
 			margin: 0;
 			letter-spacing: 1px;
+			a{
+				text-decoration: none;
+				color: inherit;	
+			}
+			
 			&:hover{
 				color: $primaryred;
 			}
@@ -387,6 +392,7 @@ body{
 		}
 	}
 	.faction-details{
+		display: none;
 		h5{
 			@include default_sansserif;
 			text-transform: uppercase;
@@ -395,11 +401,15 @@ body{
 			color: white;
 			padding: 10px;
 		}
+		p{
+			margin: 0 0 15px 0;
+		}
 	}
 	.faction-history{
 		h5{
 			background: #020951;
 		}
+
 	}
 	.faction-structure{
 		h5{
@@ -409,5 +419,8 @@ body{
 		p{
 			margin-bottom: 15px;
 		}
+	}
+	.expanded{
+		display: block;
 	}
 }
