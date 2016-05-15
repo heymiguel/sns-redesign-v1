@@ -1,6 +1,10 @@
-// words
 
-function dataParser(){
+
+function charClassesListener(){
+
+};
+
+function factionParser(){
 	$('#factions .row').on('click',function(){
 		var clickedFaction = $(this).attr('data');
 		var factionPull = factions[clickedFaction];
@@ -15,13 +19,12 @@ function dataParser(){
 
 function expander(){
 	$('#factions .row').on('click',function(){
-		// $('.faction-details', this).slideUp('fast');
 		if ($(this).find('i').hasClass('fa-plus-square')){
 			$(this).find('i').removeClass('fa-plus-square').addClass('fa-minus-square');
 		} else if ($(this).find('i').hasClass('fa-minus-square')) {
 			$(this).find('i').removeClass('fa-minus-square').addClass('fa-plus-square');
 		}
-		$('.faction-details', this).slideToggle('slow');
+		$('.faction-details', this).toggle('swing');
 	});
 };
 
@@ -41,7 +44,7 @@ function smoothScroll(){
 };
 
 function init(){
-	dataParser();
+	factionParser();
 	expander();
 	smoothScroll();
 };
