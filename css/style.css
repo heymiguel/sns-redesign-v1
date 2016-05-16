@@ -831,11 +831,17 @@ there.
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease; }
 
-.character-gallery {
+.character-gallery, .faction-details {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+  a:hover {
+    color: #E12100; }
 
 body {
   font-family: 'Glegoo', serif; }
@@ -892,7 +898,7 @@ body {
           color: #E12100; }
   body .gridder {
     width: 100%;
-    background: url("../images/graphy/graphy.png"); }
+    background: url("../images/tiny_grid/tiny_grid_@2X.png"); }
 
 .logo-holder img {
   width: 65%;
@@ -927,7 +933,14 @@ body {
       height: 27px;
       background: black;
       top: 16px;
-      left: 0; }
+      left: 0;
+      opacity: 1;
+      transition: all .5s ease-in-out;
+      -moz-transition: all .5s ease-in-out;
+      -webkit-transition: all .5s ease-in-out; }
+    #hero .redacted:hover:after {
+      opacity: 0;
+      left: -100px; }
 
 .cityscape {
   background: url("../images/city-dark.jpeg") no-repeat center;
@@ -996,10 +1009,8 @@ body {
   #char-classes .character li {
     list-style-type: none;
     margin: 0;
-    font-size: 1.2rem;
-    font-style: italic;
+    font-size: 1.3rem;
     font-family: 'Rubik', sans-serif;
-    font-weight: 500;
     padding: 0 0 0 10px; }
   #char-classes .character p {
     font-size: 1.2rem;
@@ -1095,53 +1106,77 @@ body {
       color: black;
       height: auto; }
 
-#factions h4 {
-  font-family: 'Rubik', sans-serif;
-  text-transform: uppercase;
-  font-size: 3rem;
-  margin: 0; }
-
-#factions .tagline {
-  padding: 0 0 0 25px;
-  font-style: italic;
-  font-weight: 300; }
-
-#factions .blurb {
-  text-align: center;
-  padding: 20px; }
-
-#factions .faction-title {
-  background: whitesmoke;
-  padding: 10px;
-  border: 1px dotted black; }
-  #factions .faction-title .fa {
-    position: absolute;
-    top: 30%;
-    right: 20px;
-    font-size: 3rem;
-    color: #E12100; }
-
-#factions .faction-details {
-  display: none; }
-  #factions .faction-details h5 {
+#factions {
+  padding-bottom: 50px; }
+  #factions h4 {
     font-family: 'Rubik', sans-serif;
     text-transform: uppercase;
-    font-size: 2rem;
-    font-weight: 300;
-    color: white;
-    padding: 10px; }
-  #factions .faction-details p {
-    margin: 0 0 15px 0; }
+    font-size: 3rem;
+    margin: 0; }
+  #factions .tagline {
+    padding: 0 0 0 25px;
+    font-style: italic;
+    font-weight: 300; }
+  #factions .blurb {
+    text-align: center;
+    padding: 20px; }
+  #factions .faction-title {
+    background: whitesmoke;
+    padding: 10px;
+    margin-bottom: 5px; }
+    #factions .faction-title .fa {
+      position: absolute;
+      top: 30%;
+      right: 20px;
+      font-size: 3rem;
+      color: #E12100; }
+  #factions .faction-details {
+    opacity: 0;
+    display: none; }
+    #factions .faction-details h5 {
+      font-family: 'Rubik', sans-serif;
+      text-transform: uppercase;
+      font-size: 2rem;
+      font-weight: 300;
+      color: white;
+      padding: 10px; }
+    #factions .faction-details p {
+      margin: 0 0 15px 0; }
+    #factions .faction-details .blurb {
+      font-weight: bold; }
+  #factions .faction-history h5 {
+    background: #020951; }
+  #factions .faction-structure h5 {
+    background: #C4E8DE;
+    color: black; }
+  #factions .faction-structure p {
+    margin-bottom: 15px; }
+  #factions .expanded {
+    display: block;
+    opacity: 1; }
 
-#factions .faction-history h5 {
-  background: #020951; }
+#get-started {
+  margin-bottom: 100px; }
+  #get-started .columns {
+    margin: 0; }
+  #get-started h4 {
+    font-family: 'Rubik', sans-serif; }
 
-#factions .faction-structure h5 {
-  background: #C4E8DE;
-  color: black; }
-
-#factions .faction-structure p {
-  margin-bottom: 15px; }
-
-#factions .expanded {
-  display: block; }
+footer {
+  border-top: 4px solid #929292; }
+  footer a {
+    text-decoration: none;
+    color: #929292; }
+  footer li {
+    list-style-type: none;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    font-family: 'Rubik', sans-serif; }
+  footer .links {
+    float: left; }
+  footer .the-creators {
+    float: right;
+    text-align: right; }
+    footer .the-creators a {
+      display: block; }

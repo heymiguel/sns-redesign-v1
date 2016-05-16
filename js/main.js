@@ -1,10 +1,10 @@
 function heroSectionListener(){
-	$('.hero-slogan').mouseenter(function(){
-		$('span', this).removeClass('redacted');
-	});
-	$('.hero-slogan').mouseleave(function(){
-		$('span', this).addClass('redacted');
-	});
+	// $('.hero-slogan').mouseenter(function(){
+	// 	$('span', this).removeClass('redacted');
+	// });
+	// $('.hero-slogan').mouseleave(function(){
+	// 	$('span', this).addClass('redacted');
+	// });
 };
 
 function charClassesListener(){
