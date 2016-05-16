@@ -1,6 +1,23 @@
-
+function heroSectionListener(){
+	$('.hero-slogan').mouseenter(function(){
+		$('span', this).removeClass('redacted');
+	});
+	$('.hero-slogan').mouseleave(function(){
+		$('span', this).addClass('redacted');
+	});
+};
 
 function charClassesListener(){
+	$('.character-gallery .character').on('click',function(){
+		$('.image-mask, .summary').removeClass('open');
+		$('.image-mask, .summary', this).toggleClass('open');
+		var whoAmI = $(this).attr('data');
+		borderChanger(whoAmI);
+	});
+};
+
+function borderChanger(incomingClass){
+	$('.character-details h5').removeClass().addClass(incomingClass);
 
 };
 
@@ -24,7 +41,7 @@ function expander(){
 		} else if ($(this).find('i').hasClass('fa-minus-square')) {
 			$(this).find('i').removeClass('fa-minus-square').addClass('fa-plus-square');
 		}
-		$('.faction-details', this).toggle('swing');
+		$('.faction-details', this).toggleClass('expanded');
 	});
 };
 
@@ -44,6 +61,8 @@ function smoothScroll(){
 };
 
 function init(){
+	charClassesListener();
+	heroSectionListener();
 	factionParser();
 	expander();
 	smoothScroll();

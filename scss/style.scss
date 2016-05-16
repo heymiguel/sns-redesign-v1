@@ -20,6 +20,13 @@ $primaryblue: #020951;
   -o-transition:      all 0.4s ease;
 }
 
+.character-gallery{
+		-webkit-transition: all 0.5s ease;
+	  -moz-transition:    all 0.5s ease;
+	  -ms-transition:     all 0.5s ease;
+	  -o-transition:      all 0.5s ease;
+}
+
 
 /// convenience classes
 
@@ -28,7 +35,7 @@ $primaryblue: #020951;
 	font-family: 'Rubik', sans-serif;
 }
 @mixin default_serif{
-	font-family: 'Roboto Slab', sans-serif;
+	font-family: 'Glegoo', serif;
 }
 
 @mixin vertical-align-me{
@@ -100,11 +107,12 @@ body{
 			a{
 				text-decoration: none;
 				color: inherit;	
+				&:hover{
+					color: $primaryred;
+				}
 			}
 			
-			&:hover{
-				color: $primaryred;
-			}
+			
 		}
 	}
 	.gridder{
@@ -207,9 +215,9 @@ body{
 		left: 0;
 
 	}
-	.cypher{
+	.sleuth{
 		.image-mask{
-			background: rgba(27,116,187,.8);
+			background: rgba(27,116,187,.75);
 			&.open{
 				background: none;
 			}
@@ -218,7 +226,7 @@ body{
 	}
 	.pointman{
 		.image-mask{
-			background: rgba(27,116,187,.8);
+			background: rgba(102,43,144,.75);
 			&.open{
 				background: none;
 			}
@@ -226,7 +234,7 @@ body{
 	}
 	.faceman{
 		.image-mask{
-			background: rgba(27,116,187,.8);
+			background: rgba(250,175,63,.75);
 			&.open{
 				background: none;
 			}
@@ -234,7 +242,7 @@ body{
 	}
 	.soldier{
 		.image-mask{
-			background: rgba(27,116,187,.8);
+			background: rgba(236,29,36,.75);
 			&.open{
 				background: none;
 			}
@@ -242,7 +250,7 @@ body{
 	}
 	.scout{
 		.image-mask{
-			background: rgba(27,116,187,.8);
+			background: rgba(141,198,63,.75);
 			&.open{
 				background: none;
 			}
@@ -284,19 +292,21 @@ body{
 				font-size: 1.8rem;
 				color: white;
 				letter-spacing: 1px;
-				width: 95%;
+				width: 172px;
 			}
 			&.open{
 				bottom: 0;
 				background: white;
 			}
 		}
-		&.cypher{
-			background: url('../images/classes/cypher.png') no-repeat;
+		&.sleuth{
+			background: url('../images/classes/sleuth.png') no-repeat;
 			background-size: cover;
 			.open{
 				h4{
-					color: #1B74BB;	
+					color: white;
+					background: #1B74BB;	
+					margin: 0 0 5px 0;
 				}
 			}
 		}
@@ -305,7 +315,9 @@ body{
 			background-size: cover;
 			.open{
 				h4{
-					color: #1B74BB;	
+					color: white;
+					background: #662B90;
+					margin: 0 0 5px 0;
 				}
 			}				
 		}
@@ -314,7 +326,9 @@ body{
 			background-size: cover;
 			.open{
 				h4{
-					color: #1B74BB;	
+					background: #FAB03F;
+					color: white;	
+					margin: 0 0 5px 0;
 				}
 			}
 		}
@@ -323,7 +337,9 @@ body{
 			background-size: cover;
 			.open{
 				h4{
-					color: #1B74BB;	
+					color: white;
+					background: #EC1D24;	
+					margin: 0 0 5px 0;
 				}
 			}
 		}
@@ -332,7 +348,9 @@ body{
 			background-size: cover;
 			.open{
 				h4{
-					color: #1B74BB;	
+					background: #8DC63F;
+					color: white;	
+					margin: 0 0 5px 0;
 				}
 			}
 		}
@@ -345,18 +363,40 @@ body{
 		z-index: 10;
 		background: white;
 		padding: 15px 0;
-		h5{
-			font-size: 2.2rem;
-			@include default_sansserif;
-			border-bottom: 4px solid #1B74BB;
+		p{
+			margin: 0 0 10px 0;
 		}
-		.skills, .proficiencies{
+		h5{
+			@include default_sansserif;
+			font-size: 2.2rem;
+			border-bottom: 4px solid #1B74BB;
+			&.sleuth{
+				border-bottom: 4px solid #1B74BB;
+			}
+			&.pointman{
+				border-bottom: 4px solid #662B90;
+			}
+			&.faceman{
+				border-bottom: 4px solid #FAB03F;
+			}
+			&.soldier{
+				border-bottom: 4px solid #EC1D24;	
+			}
+			&.scout{
+				border-bottom: 4px solid #8DC63F;
+			}
+		}
+		.fa{
+			font-size: 2rem;
+			margin: 0 5px 0 0;
+		}
+		.skills, .features{
 			//maybe display flex on these bad boys?
 			margin: 0 0 15px 0;
+
 			li{
-				display: inline-block;
+				display: block;
 				color: black;
-				width: 40px;
 				height: auto;
 			}
 		}

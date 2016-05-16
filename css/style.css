@@ -831,8 +831,14 @@ there.
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease; }
 
+.character-gallery {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease; }
+
 body {
-  font-family: 'Roboto Slab', sans-serif; }
+  font-family: 'Glegoo', serif; }
   body p {
     margin: 0; }
   body button {
@@ -882,8 +888,8 @@ body {
       body nav li a {
         text-decoration: none;
         color: inherit; }
-      body nav li:hover {
-        color: #E12100; }
+        body nav li a:hover {
+          color: #E12100; }
   body .gridder {
     width: 100%;
     background: url("../images/graphy/graphy.png"); }
@@ -957,28 +963,28 @@ body {
   top: 0;
   left: 0; }
 
-#char-classes .cypher .image-mask {
-  background: rgba(27, 116, 187, 0.8); }
-  #char-classes .cypher .image-mask.open {
+#char-classes .sleuth .image-mask {
+  background: rgba(27, 116, 187, 0.75); }
+  #char-classes .sleuth .image-mask.open {
     background: none; }
 
 #char-classes .pointman .image-mask {
-  background: rgba(27, 116, 187, 0.8); }
+  background: rgba(102, 43, 144, 0.75); }
   #char-classes .pointman .image-mask.open {
     background: none; }
 
 #char-classes .faceman .image-mask {
-  background: rgba(27, 116, 187, 0.8); }
+  background: rgba(250, 175, 63, 0.75); }
   #char-classes .faceman .image-mask.open {
     background: none; }
 
 #char-classes .soldier .image-mask {
-  background: rgba(27, 116, 187, 0.8); }
+  background: rgba(236, 29, 36, 0.75); }
   #char-classes .soldier .image-mask.open {
     background: none; }
 
 #char-classes .scout .image-mask {
-  background: rgba(27, 116, 187, 0.8); }
+  background: rgba(141, 198, 63, 0.75); }
   #char-classes .scout .image-mask.open {
     background: none; }
 
@@ -1014,35 +1020,45 @@ body {
       font-size: 1.8rem;
       color: white;
       letter-spacing: 1px;
-      width: 95%; }
+      width: 172px; }
     #char-classes .character .summary.open {
       bottom: 0;
       background: white; }
-  #char-classes .character.cypher {
-    background: url("../images/classes/cypher.png") no-repeat;
+  #char-classes .character.sleuth {
+    background: url("../images/classes/sleuth.png") no-repeat;
     background-size: cover; }
-    #char-classes .character.cypher .open h4 {
-      color: #1B74BB; }
+    #char-classes .character.sleuth .open h4 {
+      color: white;
+      background: #1B74BB;
+      margin: 0 0 5px 0; }
   #char-classes .character.pointman {
     background: url("../images/classes/pointman.png") no-repeat;
     background-size: cover; }
     #char-classes .character.pointman .open h4 {
-      color: #1B74BB; }
+      color: white;
+      background: #662B90;
+      margin: 0 0 5px 0; }
   #char-classes .character.faceman {
     background: url("../images/classes/faceman.png") no-repeat;
     background-size: cover; }
     #char-classes .character.faceman .open h4 {
-      color: #1B74BB; }
+      background: #FAB03F;
+      color: white;
+      margin: 0 0 5px 0; }
   #char-classes .character.soldier {
     background: url("../images/classes/soldier.png") no-repeat;
     background-size: cover; }
     #char-classes .character.soldier .open h4 {
-      color: #1B74BB; }
+      color: white;
+      background: #EC1D24;
+      margin: 0 0 5px 0; }
   #char-classes .character.scout {
     background: url("../images/classes/scout.png") no-repeat;
     background-size: cover; }
     #char-classes .character.scout .open h4 {
-      color: #1B74BB; }
+      background: #8DC63F;
+      color: white;
+      margin: 0 0 5px 0; }
   #char-classes .character .char-description {
     z-index: 10;
     background: white; }
@@ -1051,16 +1067,30 @@ body {
   z-index: 10;
   background: white;
   padding: 15px 0; }
+  #char-classes .character-details p {
+    margin: 0 0 10px 0; }
   #char-classes .character-details h5 {
-    font-size: 2.2rem;
     font-family: 'Rubik', sans-serif;
+    font-size: 2.2rem;
     border-bottom: 4px solid #1B74BB; }
-  #char-classes .character-details .skills, #char-classes .character-details .proficiencies {
+    #char-classes .character-details h5.sleuth {
+      border-bottom: 4px solid #1B74BB; }
+    #char-classes .character-details h5.pointman {
+      border-bottom: 4px solid #662B90; }
+    #char-classes .character-details h5.faceman {
+      border-bottom: 4px solid #FAB03F; }
+    #char-classes .character-details h5.soldier {
+      border-bottom: 4px solid #EC1D24; }
+    #char-classes .character-details h5.scout {
+      border-bottom: 4px solid #8DC63F; }
+  #char-classes .character-details .fa {
+    font-size: 2rem;
+    margin: 0 5px 0 0; }
+  #char-classes .character-details .skills, #char-classes .character-details .features {
     margin: 0 0 15px 0; }
-    #char-classes .character-details .skills li, #char-classes .character-details .proficiencies li {
-      display: inline-block;
+    #char-classes .character-details .skills li, #char-classes .character-details .features li {
+      display: block;
       color: black;
-      width: 40px;
       height: auto; }
 
 #factions h4 {
