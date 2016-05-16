@@ -49,7 +49,7 @@ $primaryblue: #020951;
 
 
 body{
-	
+
 	@include default_serif;
 	p{
 		margin: 0;
@@ -106,13 +106,13 @@ body{
 			letter-spacing: 1px;
 			a{
 				text-decoration: none;
-				color: inherit;	
+				color: inherit;
 				&:hover{
 					color: $primaryred;
 				}
 			}
-			
-			
+
+
 		}
 	}
 	.gridder{
@@ -197,7 +197,7 @@ body{
 		&:last-child{
 			margin: 0;
 		}
-		
+
 	}
 }
 
@@ -268,7 +268,7 @@ body{
 			font-size: 1.2rem;
 			font-style: italic;
 			@include default_sansserif;
-			font-weight: 500;			
+			font-weight: 500;
 			padding: 0 0 0 10px;
 		}
 		p{
@@ -305,7 +305,7 @@ body{
 			.open{
 				h4{
 					color: white;
-					background: #1B74BB;	
+					background: #1B74BB;
 					margin: 0 0 5px 0;
 				}
 			}
@@ -319,7 +319,7 @@ body{
 					background: #662B90;
 					margin: 0 0 5px 0;
 				}
-			}				
+			}
 		}
 		&.faceman{
 			background: url('../images/classes/faceman.png') no-repeat;
@@ -327,7 +327,7 @@ body{
 			.open{
 				h4{
 					background: #FAB03F;
-					color: white;	
+					color: white;
 					margin: 0 0 5px 0;
 				}
 			}
@@ -338,7 +338,7 @@ body{
 			.open{
 				h4{
 					color: white;
-					background: #EC1D24;	
+					background: #EC1D24;
 					margin: 0 0 5px 0;
 				}
 			}
@@ -349,7 +349,7 @@ body{
 			.open{
 				h4{
 					background: #8DC63F;
-					color: white;	
+					color: white;
 					margin: 0 0 5px 0;
 				}
 			}
@@ -366,6 +366,9 @@ body{
 		p{
 			margin: 0 0 10px 0;
 		}
+		button{
+			margin: 0 0 0 10px;
+		}
 		h5{
 			@include default_sansserif;
 			font-size: 2.2rem;
@@ -380,7 +383,7 @@ body{
 				border-bottom: 4px solid #FAB03F;
 			}
 			&.soldier{
-				border-bottom: 4px solid #EC1D24;	
+				border-bottom: 4px solid #EC1D24;
 			}
 			&.scout{
 				border-bottom: 4px solid #8DC63F;

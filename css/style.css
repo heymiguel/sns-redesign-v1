@@ -1069,6 +1069,8 @@ body {
   padding: 15px 0; }
   #char-classes .character-details p {
     margin: 0 0 10px 0; }
+  #char-classes .character-details button {
+    margin: 0 0 0 10px; }
   #char-classes .character-details h5 {
     font-family: 'Rubik', sans-serif;
     font-size: 2.2rem;

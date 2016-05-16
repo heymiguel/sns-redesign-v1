@@ -18,7 +18,21 @@ function charClassesListener(){
 
 function borderChanger(incomingClass){
 	$('.character-details h5').removeClass().addClass(incomingClass);
+	charInfoGetter(incomingClass);
+};
 
+function charInfoGetter(character){
+	var features = characterDetails[character].features;
+	var skills = characterDetails[character].skills;
+	var description = characterDetails[character].description;
+	charInfoSetter(features,skills,description,character);
+};
+
+function charInfoSetter(features,skills,description,character){
+	$('.character-details .features ul').html(features);
+	$('.character-details .skills ul').html(skills);
+	$('.character-details .char-description .description').html(description);
+	$('.character-details .features-and-skills button').text("play a " + character)
 };
 
 function factionParser(){
@@ -61,6 +75,8 @@ function smoothScroll(){
 };
 
 function init(){
+	//initialize sleuth as default display
+	borderChanger('sleuth');
 	charClassesListener();
 	heroSectionListener();
 	factionParser();
