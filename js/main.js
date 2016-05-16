@@ -50,6 +50,7 @@ function factionParser(){
 
 function expander(){
 	$('#factions .row').on('click',function(){
+		//fix this
 		if ($(this).find('i').hasClass('fa-plus-square')){
 			$(this).find('i').removeClass('fa-plus-square').addClass('fa-minus-square');
 		} else if ($(this).find('i').hasClass('fa-minus-square')) {

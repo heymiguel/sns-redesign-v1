@@ -1123,7 +1123,8 @@ body {
   #factions .faction-title {
     background: whitesmoke;
     padding: 10px;
-    margin-bottom: 5px; }
+    margin-bottom: 5px;
+    border-bottom: 4px #020951 solid; }
     #factions .faction-title .fa {
       position: absolute;
       top: 30%;
