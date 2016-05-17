@@ -8,7 +8,7 @@ var characterDetails = {
 	pointman: {
 			features: '<li>Increased efficiency attribute</li><li>Enhances team performance</li><li>Provides measure of stability during high-stakes missions</li>',
 			skills: '<li><i class="fa fa-cogs" aria-hidden="true"></i>Planning</li><li><i class="fa fa-list-ol" aria-hidden="true"></i>Focus</li><li><i class="fa fa-group" aria-hidden="true"></i>Leadership</li>',
-			description: "<p>we dont have a pointman description.</p><p>that's sad.</p>"
+			description: "<p>They are the handlers, directors, and operators that live and breathe the spy game. Pointmen convert disadvantages into advantages, turning the tide in the gravest of circumstances. They are trained to make snap decisions, and always apply the best possible strategy in a given situation. They are bold, decisive, highly adaptive, and terrifyingly skilled individuals with an unparalleled understanding of the espionage world.</p>"
 	},
 	faceman: {
 			features: '<li>Increased charisma attribute</li><li>Excels at social/ confidence missions</li><li>allows access to out-of-factionconnections/ contacts</li>',
