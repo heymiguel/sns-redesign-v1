@@ -1087,6 +1087,12 @@ body {
       font-size: 1.8rem;
       color: white;
       letter-spacing: 1px; }
+      @media (max-width: 414px) {
+        #char-classes .character .summary h4 {
+          transition: none;
+          background: url("../images/plus.png") no-repeat;
+          background-position: 98%;
+          background-size: 8%; } }
     @media (max-width: 414px) {
       #char-classes .character .summary li, #char-classes .character .summary p {
         visibility: hidden; } }
@@ -1189,10 +1195,23 @@ body {
     text-transform: uppercase;
     font-size: 3rem;
     margin: 0; }
+    @media (max-width: 414px) {
+      #factions h4 {
+        font-size: 1.5rem; } }
+  #factions .row img {
+    width: 40px;
+    height: 40px;
+    padding-top: 10px; }
+    @media (max-width: 414px) {
+      #factions .row img {
+        display: none; } }
   #factions .tagline {
     padding: 0 0 0 25px;
     font-style: italic;
     font-weight: 300; }
+    @media (max-width: 414px) {
+      #factions .tagline {
+        font-size: 1rem; } }
   #factions .blurb {
     text-align: center;
     padding: 20px; }
@@ -1203,9 +1222,10 @@ body {
     border-bottom: 4px #020951 solid; }
     #factions .faction-title .fa {
       position: absolute;
-      top: 30%;
-      right: 20px;
+      top: 0;
+      right: 0;
       font-size: 3rem;
+      padding: 10px;
       color: #E12100; }
   #factions .faction-details {
     opacity: 0;

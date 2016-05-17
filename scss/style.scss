@@ -370,6 +370,12 @@ body{
 				color: white;
 				letter-spacing: 1px;
 				// width: 172px;
+				@media (max-width: 414px){
+					transition: none;
+					background: url('../images/plus.png') no-repeat;
+					background-position: 98%;
+					background-size: 8%;
+				}
 			}
 			li,p{
 				@media (max-width: 414px){
@@ -447,7 +453,7 @@ body{
 		&.scout{
 			background: url('../images/classes/scout.png') no-repeat;
 			background-size: cover;
-			@media (max-width: 414px){
+					@media (max-width: 414px){
 						background: none;
 					}
 			.open{
@@ -517,12 +523,27 @@ body{
 		text-transform: uppercase;
 		font-size: 3rem;
 		margin: 0;
-
+		@media (max-width: 414px){
+			font-size: 1.5rem;
+		}
+	}
+	.row{
+		img{
+			width: 40px;
+			height: 40px;
+			padding-top: 10px;
+			@media (max-width: 414px){
+				display: none;
+			}
+		}
 	}
 	.tagline{
 		padding: 0 0 0 25px;
 		font-style: italic;
 		font-weight: 300;
+		@media (max-width: 414px){
+			font-size: 1rem;
+		}
 	}
 	.blurb{
 		text-align: center;
@@ -535,9 +556,10 @@ body{
 		border-bottom: 4px $primaryblue solid;
 		.fa{
 			position: absolute;
-			top: 30%;
-			right: 20px;
+			top: 0;
+			right:0;
 			font-size: 3rem;
+			padding: 10px;
 			color: $primaryred;
 		}
 	}
