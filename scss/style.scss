@@ -106,12 +106,22 @@ body{
 		ul{
 			margin: 0;
 			padding: 10px;
+			@media (max-width: 414px){
+				padding: 0;
+			}
 		}
 		li{
 			display: inline-block;
+
 			width: 19.5%;
 			margin: 0;
 			letter-spacing: 1px;
+			@media (max-width: 414px) {
+				text-align: left;
+				font-size:1rem;
+				width: auto;
+				margin-right: 10px;
+			}
 			a{
 				text-decoration: none;
 				color: inherit;
@@ -119,8 +129,11 @@ body{
 					color: $primaryred;
 				}
 			}
-
-
+		}
+		.logo-holder{
+			@media (max-width: 414px) {
+				display: none;
+			}
 		}
 	}
 	.gridder{
@@ -142,6 +155,9 @@ body{
 ///// hero section
 #hero{
 	min-height:95vh;
+	@media (max-width: 414px){
+		min-height: 600px;
+	}
 	text-align: center;
 	display: flex;
 	flex-direction: column;
@@ -153,14 +169,26 @@ body{
 		margin: 0 0 15px 0;
 		text-transform: uppercase;
 		font-size: 5rem;
+		@media (max-width: 768px) and (min-width: 1024px){
+			font-size: 4.5rem;
+		}
 		p{
 			margin: -20px 0;
+			@media (max-width: 414px){
+				margin: 0;
+			}
 		}
+		@media (max-width: 414px){
+			font-size: 2rem;
 
+		}
 	}
 	.subtitle{
 		font-size: 2rem;
 		font-weight: 300;
+		@media (max-width: 414px){
+			font-size: 1.5rem;
+		}
 	}
 	button{
 		margin: 5% 0 0 0;
@@ -174,6 +202,9 @@ body{
 			height: 27px;
 			background: black;
 			top: 16px;
+			@media (max-width: 414px){
+				top: 0;
+			}
 			left: 0;
 			opacity: 1;
 			transition: all .5s ease-in-out;
@@ -234,6 +265,9 @@ body{
 	.sleuth{
 		.image-mask{
 			background: rgba(27,116,187,.75);
+			@media (max-width: 414px){
+				background: rgb(27,116,187);
+			}
 			&.open{
 				background: none;
 			}
@@ -243,6 +277,9 @@ body{
 	.pointman{
 		.image-mask{
 			background: rgba(102,43,144,.75);
+			@media (max-width: 414px){
+				background: rgb(102,43,144);
+			}
 			&.open{
 				background: none;
 			}
@@ -251,6 +288,9 @@ body{
 	.faceman{
 		.image-mask{
 			background: rgba(250,175,63,.75);
+			@media (max-width: 414px){
+				background: rgb(250,175,63);
+			}
 			&.open{
 				background: none;
 			}
@@ -259,6 +299,9 @@ body{
 	.soldier{
 		.image-mask{
 			background: rgba(236,29,36,.75);
+			@media (max-width: 414px){
+				background: rgb(236,29,36);
+			}
 			&.open{
 				background: none;
 			}
@@ -267,6 +310,9 @@ body{
 	.scout{
 		.image-mask{
 			background: rgba(141,198,63,.75);
+			@media (max-width: 414px){
+				background: rgb(141,198,63);
+			}
 			&.open{
 				background: none;
 			}
@@ -276,8 +322,18 @@ body{
 	.character{
 		height: 600px;
 		width: 20%;
+		@media (max-width: 414px){
+			height: 50px;
+			width: 100%
+		}
+		&.clicked{
+			@media (max-width: 414px){
+				height: 200px;
+				width: 100%
+			}
+		}
+
 		float: left;
-		background: pink;
 		li{
 			list-style-type: none;
 			margin: 0;
@@ -287,18 +343,24 @@ body{
 			padding: 0 0 0 10px;
 		}
 		p{
-			font-size: 1.2rem;
+			font-size: 1rem;
 			padding: 0 0 0 10px;
 		}
 
+
+
 		.summary{
 			position: absolute;
-			bottom: -165px;
+			bottom: -168px;
 			left: 0px;
 			height: 200px;
 			background: none;
 			width: 100%;
 			z-index: 2;
+			@media (max-width: 414px){
+				position: relative;
+				bottom: 0;
+			}
 			h4{
 				padding: 5px 10px;
 				margin: 0;
@@ -307,16 +369,31 @@ body{
 				font-size: 1.8rem;
 				color: white;
 				letter-spacing: 1px;
-				width: 172px;
+				// width: 172px;
+			}
+			li,p{
+				@media (max-width: 414px){
+					visibility: hidden;
+				}
 			}
 			&.open{
 				bottom: 0;
 				background: white;
+				li,p{
+					@media (max-width: 414px){
+						visibility: visible;
+					}
+				}
 			}
+
 		}
 		&.sleuth{
 			background: url('../images/classes/sleuth.png') no-repeat;
 			background-size: cover;
+			@media (max-width: 414px){
+						background: none;
+					}
+
 			.open{
 				h4{
 					color: white;
@@ -328,6 +405,9 @@ body{
 		&.pointman{
 			background: url('../images/classes/pointman.png') no-repeat;
 			background-size: cover;
+			@media (max-width: 414px){
+						background: none;
+					}
 			.open{
 				h4{
 					color: white;
@@ -339,6 +419,9 @@ body{
 		&.faceman{
 			background: url('../images/classes/faceman.png') no-repeat;
 			background-size: cover;
+			@media (max-width: 414px){
+						background: none;
+					}
 			.open{
 				h4{
 					background: #FAB03F;
@@ -350,6 +433,9 @@ body{
 		&.soldier{
 			background: url('../images/classes/soldier.png') no-repeat;
 			background-size: cover;
+			@media (max-width: 414px){
+						background: none;
+					}
 			.open{
 				h4{
 					color: white;
@@ -361,6 +447,9 @@ body{
 		&.scout{
 			background: url('../images/classes/scout.png') no-repeat;
 			background-size: cover;
+			@media (max-width: 414px){
+						background: none;
+					}
 			.open{
 				h4{
 					background: #8DC63F;
@@ -498,6 +587,9 @@ body{
 	}
 	h4{
 		@include default_sansserif;
+	}
+	p{
+		padding: 0 30px 0 0;
 	}
 }
 footer{

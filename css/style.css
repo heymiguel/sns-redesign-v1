@@ -886,16 +886,28 @@ body {
     body nav ul {
       margin: 0;
       padding: 10px; }
+      @media (max-width: 414px) {
+        body nav ul {
+          padding: 0; } }
     body nav li {
       display: inline-block;
       width: 19.5%;
       margin: 0;
       letter-spacing: 1px; }
+      @media (max-width: 414px) {
+        body nav li {
+          text-align: left;
+          font-size: 1rem;
+          width: auto;
+          margin-right: 10px; } }
       body nav li a {
         text-decoration: none;
         color: inherit; }
         body nav li a:hover {
           color: #E12100; }
+    @media (max-width: 414px) {
+      body nav .logo-holder {
+        display: none; } }
   body .gridder {
     width: 100%;
     background: url("../images/tiny_grid/tiny_grid_@2X.png"); }
@@ -911,17 +923,32 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+  @media (max-width: 414px) {
+    #hero {
+      min-height: 600px; } }
   #hero .hero-slogan {
     height: 100%;
     font-family: 'Rubik', sans-serif;
     margin: 0 0 15px 0;
     text-transform: uppercase;
     font-size: 5rem; }
+    @media (max-width: 768px) and (min-width: 1024px) {
+      #hero .hero-slogan {
+        font-size: 4.5rem; } }
     #hero .hero-slogan p {
       margin: -20px 0; }
+      @media (max-width: 414px) {
+        #hero .hero-slogan p {
+          margin: 0; } }
+    @media (max-width: 414px) {
+      #hero .hero-slogan {
+        font-size: 2rem; } }
   #hero .subtitle {
     font-size: 2rem;
     font-weight: 300; }
+    @media (max-width: 414px) {
+      #hero .subtitle {
+        font-size: 1.5rem; } }
   #hero button {
     margin: 5% 0 0 0; }
   #hero .redacted {
@@ -938,6 +965,9 @@ body {
       transition: all .5s ease-in-out;
       -moz-transition: all .5s ease-in-out;
       -webkit-transition: all .5s ease-in-out; }
+      @media (max-width: 414px) {
+        #hero .redacted:after {
+          top: 0; } }
     #hero .redacted:hover:after {
       opacity: 0;
       left: -100px; }
@@ -978,34 +1008,56 @@ body {
 
 #char-classes .sleuth .image-mask {
   background: rgba(27, 116, 187, 0.75); }
+  @media (max-width: 414px) {
+    #char-classes .sleuth .image-mask {
+      background: #1b74bb; } }
   #char-classes .sleuth .image-mask.open {
     background: none; }
 
 #char-classes .pointman .image-mask {
   background: rgba(102, 43, 144, 0.75); }
+  @media (max-width: 414px) {
+    #char-classes .pointman .image-mask {
+      background: #662b90; } }
   #char-classes .pointman .image-mask.open {
     background: none; }
 
 #char-classes .faceman .image-mask {
   background: rgba(250, 175, 63, 0.75); }
+  @media (max-width: 414px) {
+    #char-classes .faceman .image-mask {
+      background: #faaf3f; } }
   #char-classes .faceman .image-mask.open {
     background: none; }
 
 #char-classes .soldier .image-mask {
   background: rgba(236, 29, 36, 0.75); }
+  @media (max-width: 414px) {
+    #char-classes .soldier .image-mask {
+      background: #ec1d24; } }
   #char-classes .soldier .image-mask.open {
     background: none; }
 
 #char-classes .scout .image-mask {
   background: rgba(141, 198, 63, 0.75); }
+  @media (max-width: 414px) {
+    #char-classes .scout .image-mask {
+      background: #8dc63f; } }
   #char-classes .scout .image-mask.open {
     background: none; }
 
 #char-classes .character {
   height: 600px;
   width: 20%;
-  float: left;
-  background: pink; }
+  float: left; }
+  @media (max-width: 414px) {
+    #char-classes .character {
+      height: 50px;
+      width: 100%; } }
+  @media (max-width: 414px) {
+    #char-classes .character.clicked {
+      height: 200px;
+      width: 100%; } }
   #char-classes .character li {
     list-style-type: none;
     margin: 0;
@@ -1013,16 +1065,20 @@ body {
     font-family: 'Rubik', sans-serif;
     padding: 0 0 0 10px; }
   #char-classes .character p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 0 0 0 10px; }
   #char-classes .character .summary {
     position: absolute;
-    bottom: -165px;
+    bottom: -168px;
     left: 0px;
     height: 200px;
     background: none;
     width: 100%;
     z-index: 2; }
+    @media (max-width: 414px) {
+      #char-classes .character .summary {
+        position: relative;
+        bottom: 0; } }
     #char-classes .character .summary h4 {
       padding: 5px 10px;
       margin: 0;
@@ -1030,14 +1086,22 @@ body {
       text-transform: uppercase;
       font-size: 1.8rem;
       color: white;
-      letter-spacing: 1px;
-      width: 172px; }
+      letter-spacing: 1px; }
+    @media (max-width: 414px) {
+      #char-classes .character .summary li, #char-classes .character .summary p {
+        visibility: hidden; } }
     #char-classes .character .summary.open {
       bottom: 0;
       background: white; }
+      @media (max-width: 414px) {
+        #char-classes .character .summary.open li, #char-classes .character .summary.open p {
+          visibility: visible; } }
   #char-classes .character.sleuth {
     background: url("../images/classes/sleuth.png") no-repeat;
     background-size: cover; }
+    @media (max-width: 414px) {
+      #char-classes .character.sleuth {
+        background: none; } }
     #char-classes .character.sleuth .open h4 {
       color: white;
       background: #1B74BB;
@@ -1045,6 +1109,9 @@ body {
   #char-classes .character.pointman {
     background: url("../images/classes/pointman.png") no-repeat;
     background-size: cover; }
+    @media (max-width: 414px) {
+      #char-classes .character.pointman {
+        background: none; } }
     #char-classes .character.pointman .open h4 {
       color: white;
       background: #662B90;
@@ -1052,6 +1119,9 @@ body {
   #char-classes .character.faceman {
     background: url("../images/classes/faceman.png") no-repeat;
     background-size: cover; }
+    @media (max-width: 414px) {
+      #char-classes .character.faceman {
+        background: none; } }
     #char-classes .character.faceman .open h4 {
       background: #FAB03F;
       color: white;
@@ -1059,6 +1129,9 @@ body {
   #char-classes .character.soldier {
     background: url("../images/classes/soldier.png") no-repeat;
     background-size: cover; }
+    @media (max-width: 414px) {
+      #char-classes .character.soldier {
+        background: none; } }
     #char-classes .character.soldier .open h4 {
       color: white;
       background: #EC1D24;
@@ -1066,6 +1139,9 @@ body {
   #char-classes .character.scout {
     background: url("../images/classes/scout.png") no-repeat;
     background-size: cover; }
+    @media (max-width: 414px) {
+      #char-classes .character.scout {
+        background: none; } }
     #char-classes .character.scout .open h4 {
       background: #8DC63F;
       color: white;
@@ -1162,6 +1238,8 @@ body {
     margin: 0; }
   #get-started h4 {
     font-family: 'Rubik', sans-serif; }
+  #get-started p {
+    padding: 0 30px 0 0; }
 
 footer {
   border-top: 4px solid #929292; }

@@ -9,6 +9,8 @@ function heroSectionListener(){
 
 function charClassesListener(){
 	$('.character-gallery .character').on('click',function(){
+		$('.character').removeClass('clicked');
+		$(this).addClass('clicked');
 		$('.image-mask, .summary').removeClass('open');
 		$('.image-mask, .summary', this).toggleClass('open');
 		var whoAmI = $(this).attr('data');
